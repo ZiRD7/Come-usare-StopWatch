@@ -13,7 +13,7 @@ namespace Come_usare_StopWatch
 {
     public partial class frmMain : Form
     {
-        Stopwatch stopwatch;
+        Stopwatch stopwatch = new Stopwatch();
 
         public frmMain()
         {
@@ -36,8 +36,7 @@ namespace Come_usare_StopWatch
             btnStart.Enabled = false;
             btnRestart.Enabled = true;
             btnStop.Enabled = true;
-
-            stopwatch = new Stopwatch();
+            
             stopwatch.Start();
 
             txtMin.Text = "0";
@@ -48,7 +47,7 @@ namespace Come_usare_StopWatch
         private void btnStop_Click(object sender, EventArgs e)
         {
             btnStart.Enabled = true;
-            btnRestart.Enabled = false;
+            btnRestart.Enabled = true;
             btnStop.Enabled = false;
 
             stopwatch.Stop();
